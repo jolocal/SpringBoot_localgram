@@ -3,9 +3,13 @@ package com.local.localgram.web.dto.user;
 import com.local.localgram.domain.user.User;
 import lombok.Data;
 
+import javax.validation.constraints.NotBlank;
+
 @Data
 public class UserUpdateDto {
+    @NotBlank
     private String name; // 필수값
+    @NotBlank
     private String password; // 필수값
     private String website;
     private String bio;
@@ -24,3 +28,5 @@ public class UserUpdateDto {
                 .build();
     }
 }
+
+

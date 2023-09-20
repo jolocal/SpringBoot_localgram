@@ -16,13 +16,13 @@
                     <img src="#" onerror="this.src='/images/person.jpeg'" />
                 </div>
                 <div class="item__username">
-                    <h2>TherePrograming</h2>
+                    <h2>${principal.user.username}</h2>
                 </div>
             </div>
             <!--프로필셋팅 아이디영역end-->
 
             <!--프로필 수정-->
-            <form id="profileUpdate">
+            <form id="profileUpdate" onsubmit="update(${principal.user.id},event)">
             <div class="content-item__02">
                 <div class="item__title">이름</div>
                 <div class="item__input">
@@ -34,7 +34,7 @@
                 <div class="item__title">유저네임</div>
                 <div class="item__input">
                     <input type="text" name="username" placeholder="유저네임"
-                           value="${principal.user.username}" readonly="readonly" />
+                           value="${principal.user.username}" readonly="readonly"  />
                 </div>
             </div>
             <div class="content-item__04">
@@ -88,7 +88,7 @@
             <div class="content-item__11">
                 <div class="item__title"></div>
                 <div class="item__input">
-                    <button type="button" onclick="update(${principal.user.id})">제출</button>
+                    <button>제출</button>
                 </div>
             </div>
             <!--제출버튼end-->
