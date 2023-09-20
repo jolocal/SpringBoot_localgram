@@ -1,5 +1,6 @@
 package com.local.localgram.handler;
 
+import com.local.localgram.handler.ex.CustomApiException;
 import com.local.localgram.handler.ex.CustomValidationApiException;
 import com.local.localgram.handler.ex.CustomValidationException;
 import com.local.localgram.utill.Script;
@@ -32,5 +33,10 @@ public class ControllerExceptionHandler {
     @ExceptionHandler(CustomValidationApiException.class)
     public ResponseEntity<CMRespDto<?>> validationApiException(CustomValidationApiException e){
         return new ResponseEntity<>(new CMRespDto<>(-1,e.getMessage(),e.getErrorMap()),HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(CustomApiException.class)
+    public ResponseEntity<CMRespDto<?>> apiException(CustomApiException e){
+        return new ResponseEntity<>(new CMRespDto<>(-1,e.getMessage(),null),HttpStatus.BAD_REQUEST);
     }
 }

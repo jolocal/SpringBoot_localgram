@@ -21,7 +21,7 @@ spring:
   jpa:
     open-in-view: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update #create #update #none
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       show-sql: ture
@@ -35,3 +35,6 @@ spring:
     user:
       name: test
       password: 1234
+
+file:
+  path: C:/workspace/springbootwork/upload/
