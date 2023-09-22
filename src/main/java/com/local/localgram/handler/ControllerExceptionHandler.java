@@ -1,6 +1,7 @@
 package com.local.localgram.handler;
 
 import com.local.localgram.handler.ex.CustomApiException;
+import com.local.localgram.handler.ex.CustomException;
 import com.local.localgram.handler.ex.CustomValidationApiException;
 import com.local.localgram.handler.ex.CustomValidationException;
 import com.local.localgram.utill.Script;
@@ -18,7 +19,7 @@ import java.util.Map;
 public class ControllerExceptionHandler {
 
     // JavaScript 응답하는 핸들러
-    @ExceptionHandler(CustomValidationException.class) // runtimeException이 발생할때 함수 실행
+    @ExceptionHandler(CustomValidationException.class)
     public String validationException(CustomValidationException e){
         /*
         CMRespDto, Script 비교
@@ -32,6 +33,13 @@ public class ControllerExceptionHandler {
             return Script.back(e.getErrorMap().toString());
         }
     }
+
+    // profile 페이지에서 사용될 핸들러
+    @ExceptionHandler(CustomException.class)
+    public String exception(CustomException e){
+        return Script.back(e.getMessage());
+    }
+
 
     // CMRespDto 오브젝트를 응답하는 핸들러
     @ExceptionHandler(CustomValidationApiException.class)

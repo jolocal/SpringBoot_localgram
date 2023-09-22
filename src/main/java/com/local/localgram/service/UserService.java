@@ -2,6 +2,7 @@ package com.local.localgram.service;
 
 import com.local.localgram.domain.user.User;
 import com.local.localgram.domain.user.UserRepository;
+import com.local.localgram.handler.ex.CustomException;
 import com.local.localgram.handler.ex.CustomValidationApiException;
 import com.local.localgram.handler.ex.CustomValidationException;
 import lombok.RequiredArgsConstructor;
@@ -19,6 +20,15 @@ public class UserService {
 
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder encoder;
+
+    public User 회원프로필(int userId){
+        // select * from image where userId =: userId;
+        User userEntity = userRepository.findById(userId).orElseThrow(()->{
+            throw new CustomException("해당 프로필 페이지는 없는 페이지입니다.");
+        });
+
+        return userEntity;
+    }
 
     @Transactional
     public User 회원수정(int id, User user) {

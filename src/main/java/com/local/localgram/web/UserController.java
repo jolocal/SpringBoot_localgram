@@ -1,7 +1,11 @@
 package com.local.localgram.web;
 
 import com.local.localgram.config.auth.PrincipalDetails;
+import com.local.localgram.domain.user.User;
+import com.local.localgram.service.UserService;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.Banner;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -12,9 +16,15 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 @Slf4j
+@RequiredArgsConstructor
 public class UserController {
+
+    private final UserService userService;
+
     @GetMapping("/user/{id}")
-    public String profile(@PathVariable int id){
+    public String profile(@PathVariable int id, Model model){
+        User userEntity = userService.회원프로필(id);
+        model.addAttribute("user",userEntity);
         return "user/profile";
     }
 
