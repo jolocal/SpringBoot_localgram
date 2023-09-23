@@ -1,6 +1,7 @@
 package com.local.localgram.service;
 
 import com.local.localgram.config.auth.PrincipalDetails;
+import com.local.localgram.domain.subscribe.SubscribeRepository;
 import com.local.localgram.domain.user.User;
 import com.local.localgram.domain.user.UserRepository;
 import com.local.localgram.handler.ex.CustomException;
@@ -22,22 +23,30 @@ public class UserService {
 
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder encoder;
-
+    private final SubscribeRepository subscribeRepository;
     @Transactional(readOnly = true)
     public UserProfileDto 회원프로필(
-            int pageOwnerId,
+            int pageUserId,
             int principalId
     ){
         UserProfileDto dto = new UserProfileDto();
 
         // select * from image where userId =: userId;
-        User userEntity = userRepository.findById(pageOwnerId).orElseThrow(()->{
+        User userEntity = userRepository.findById(pageUserId).orElseThrow(()->{
             throw new CustomException("해당 프로필 페이지는 없는 페이지입니다.");
         });
-
+        // 해당 페이지 유저 정보
         dto.setUser(userEntity);
-        dto.setPageOwnerStatus(pageOwnerId == principalId);
+        // 해당 페이지 유저 상태
+        dto.setPageOwnerStatus(pageUserId == principalId);
+        // 이미지 갯수
         dto.setImageCount(userEntity.getImages().size());
+
+        // 구독정보
+        int subscribeStatus = subscribeRepository.mSubscribeStatus(principalId, pageUserId);
+        int subscribeCount = subscribeRepository.mSubscribeCount(pageUserId);
+        dto.setSubscribeStatus(subscribeStatus == 1);
+        dto.setSubscribeCount(subscribeCount);
 
         return dto;
     }
@@ -67,4 +76,3 @@ public class UserService {
         // 더티체킹이 일어나서 업데이트가 완료됨.
     }
 }
-

@@ -23,11 +23,11 @@ public class UserController {
     private final UserService userService;
 
     // 프로필 메인
-    @GetMapping("/user/{pageOwnerId}")
-    public String profile(@PathVariable int pageOwnerId,
+    @GetMapping("/user/{pageUserId}")
+    public String profile(@PathVariable int pageUserId,
                           @AuthenticationPrincipal PrincipalDetails principalDetails,
                           Model model){
-        UserProfileDto dto = userService.회원프로필(pageOwnerId,principalDetails.getUser().getId());
+        UserProfileDto dto = userService.회원프로필(pageUserId,principalDetails.getUser().getId());
         model.addAttribute("dto",dto);
         return "user/profile";
     }

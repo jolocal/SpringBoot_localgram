@@ -35,7 +35,7 @@ public class ImageService {
         // 1. 업로드 되는 원본 파일명을 imageFileName이라고 지정
         // 3. UUID를 더한값으로 지정
         String imageFileName = uuid + "_" + imageUploadDto.getFile().getOriginalFilename();
-        log.info("imageFileName: {}",imageFileName);
+        log.info("이미지파일이름: {}",imageFileName);
 
         // 4. image 저장 경로 지정
         Path imageFilePath = Paths.get(uploadFolder + imageFileName);
@@ -50,6 +50,6 @@ public class ImageService {
 
         // Image 테이블에 저장
         Image image = imageUploadDto.toEntity(imageFileName, principalDetails.getUser()); // UUID+OriginalFilename
-
+        imageRepository.save(image);
     }
 }
