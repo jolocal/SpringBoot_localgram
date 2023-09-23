@@ -1,5 +1,6 @@
 package com.local.localgram.domain.user;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.local.localgram.domain.image.Image;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -43,7 +44,8 @@ public class User {
     // User를 SELECT 할때 해당 user id로 등록된 image들을 다 가져와
     // Lazy = User를 select 할때 해당 User id로 등록된 image들을 가져오지마 - 대신 getImages()함수의 image들이 호출될 때 가져와
     // Eager = User를 select 할때 해당 User id로 등록된 image들을 전부 Join해서 가져와
-    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    @JsonIgnoreProperties({"user"})
     private List<Image> images; // 양방향 매핑
 
     private LocalDateTime createDate;

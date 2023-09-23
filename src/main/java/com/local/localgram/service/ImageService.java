@@ -50,8 +50,6 @@ public class ImageService {
 
         // Image 테이블에 저장
         Image image = imageUploadDto.toEntity(imageFileName, principalDetails.getUser()); // UUID+OriginalFilename
-        Image imageEntity = imageRepository.save(image);
 
-        log.info("imageEntity : {}",imageEntity);
     }
 }

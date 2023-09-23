@@ -1,10 +1,12 @@
 package com.local.localgram.service;
 
+import com.local.localgram.config.auth.PrincipalDetails;
 import com.local.localgram.domain.user.User;
 import com.local.localgram.domain.user.UserRepository;
 import com.local.localgram.handler.ex.CustomException;
 import com.local.localgram.handler.ex.CustomValidationApiException;
 import com.local.localgram.handler.ex.CustomValidationException;
+import com.local.localgram.web.dto.user.UserProfileDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -21,13 +23,23 @@ public class UserService {
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder encoder;
 
-    public User 회원프로필(int userId){
+    @Transactional(readOnly = true)
+    public UserProfileDto 회원프로필(
+            int pageOwnerId,
+            int principalId
+    ){
+        UserProfileDto dto = new UserProfileDto();
+
         // select * from image where userId =: userId;
-        User userEntity = userRepository.findById(userId).orElseThrow(()->{
+        User userEntity = userRepository.findById(pageOwnerId).orElseThrow(()->{
             throw new CustomException("해당 프로필 페이지는 없는 페이지입니다.");
         });
 
-        return userEntity;
+        dto.setUser(userEntity);
+        dto.setPageOwnerStatus(pageOwnerId == principalId);
+        dto.setImageCount(userEntity.getImages().size());
+
+        return dto;
     }
 
     @Transactional

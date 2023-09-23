@@ -1,10 +1,7 @@
 package com.local.localgram.domain.image;
 
 import com.local.localgram.domain.user.User;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -33,4 +30,15 @@ public class Image {
         this.createDate = LocalDateTime.now();
     }
 
+    //오브젝트를 콘솔에 출력할때 stackoverflow error 발생
+    //user부분은 출력되지않게함
+/*    @Override
+    public String toString() {
+        return "Image{" +
+                "id=" + id +
+                ", caption='" + caption + '\'' +
+                ", postImageUrl='" + postImageUrl + '\'' +
+                ", createDate=" + createDate +
+                '}';
+    }*/
 }
