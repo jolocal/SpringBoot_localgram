@@ -8,10 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -26,9 +23,6 @@ public class SubscribeApiController {
             @AuthenticationPrincipal PrincipalDetails principalDetails,
             @PathVariable int toUserId
     ){
-        log.info("구독하기 api 컨트롤러 시작");
-        log.info("구독할 사람 : {}",toUserId);
-        log.info("나는 누구? : {}",principalDetails.getUser().getId());
         subscribeService.구독하기(principalDetails.getUser().getId(),toUserId);
         return new ResponseEntity<>(new CMRespDto<>(1,"구독하기 성공",null), HttpStatus.OK);
     }

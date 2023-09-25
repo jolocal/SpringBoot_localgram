@@ -1,5 +1,6 @@
 package com.local.localgram.domain.image;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.local.localgram.domain.user.User;
 import lombok.*;
 
@@ -19,8 +20,9 @@ public class Image {
     private String caption;
     private String postImageUrl; // image가 서버로 전송되어 저장되는 경로
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "userId")
+    @JsonIgnoreProperties({"images"})
     private User user;
 
     private LocalDateTime createDate;
@@ -29,16 +31,4 @@ public class Image {
     public void createDate(){
         this.createDate = LocalDateTime.now();
     }
-
-    //오브젝트를 콘솔에 출력할때 stackoverflow error 발생
-    //user부분은 출력되지않게함
-/*    @Override
-    public String toString() {
-        return "Image{" +
-                "id=" + id +
-                ", caption='" + caption + '\'' +
-                ", postImageUrl='" + postImageUrl + '\'' +
-                ", createDate=" + createDate +
-                '}';
-    }*/
 }
