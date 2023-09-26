@@ -1,11 +1,13 @@
 package com.local.localgram.domain.image;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.local.localgram.domain.likes.Likes;
 import com.local.localgram.domain.user.User;
 import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -24,6 +26,21 @@ public class Image {
     @JoinColumn(name = "userId")
     @JsonIgnoreProperties({"images"})
     private User user;
+
+    // 이미지 좋아요
+    @JsonIgnoreProperties({"image"})
+    @OneToMany(mappedBy = "image")
+    private List<Likes> likes;
+
+    // 좋아요 상태
+    @Transient // DB에 컬럼이 만들어지지 않는다.
+    private boolean likeStatus;
+
+    // 좋아요 갯수
+    @Transient
+    private int likeCount;
+
+    //댓글
 
     private LocalDateTime createDate;
 
