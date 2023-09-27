@@ -31,13 +31,16 @@ public class CommentService {
         comment.setUser(userEntity);
         comment.setImage(image);
 
-        Comment commentEntity = commentRepository.save(comment);
-
-        return commentEntity;
+        return commentRepository.save(comment);
     }
 
     //댓글삭제
     @Transactional
-    public void 댓글삭제(){
+    public void 댓글삭제(int commentId){
+        try{
+            commentRepository.deleteById(commentId);
+        }catch (Exception e){
+            throw new CustomApiException(e.getMessage());
+        }
     }
 }

@@ -26,12 +26,13 @@ public class CommentApiController {
         Comment comment = commentService.댓글쓰기(commentDto.getContent(),
                                                 commentDto.getImageId(),
                                                 principalDetails.getUser().getId()); // content,imageId,userId
-        return new ResponseEntity<>(new CMRespDto<>(1,"댓글쓰기성공",comment), HttpStatus.OK);
+        return new ResponseEntity<>(new CMRespDto<>(1,"댓글쓰기성공",comment), HttpStatus.CREATED);
     }
 
     // 댓글 삭제
-    @DeleteMapping("/api/comment/{id}")
-    public ResponseEntity<?> commentDelete(@PathVariable int id){
+    @DeleteMapping("/api/comment/{commentId}")
+    public ResponseEntity<?> commentDelete(@PathVariable int commentId){
+        commentService.댓글삭제(commentId);
         return new ResponseEntity<>(new CMRespDto<>(1,"댓글삭제성공",null),HttpStatus.OK);
     }
 }

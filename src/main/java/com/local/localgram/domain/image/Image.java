@@ -42,6 +42,8 @@ public class Image {
     private int likeCount;
 
     //댓글
+    @OrderBy("id desc")
+    @JsonIgnoreProperties({"image"})
     @OneToMany(mappedBy = "image") // default FetchType.LAZY
     private List<Comment> comments; // N
 
