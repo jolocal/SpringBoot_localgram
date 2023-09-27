@@ -34,8 +34,7 @@ public class ImageApiController {
             @PageableDefault(size = 3) Pageable pageable
     ){
         Page<Image> images = imageService.이미지스토리(principalDetails.getUser().getId(), pageable);
-        return new ResponseEntity<>(
-                new CMRespDto<>(1,"이미지스토리 불러오기 성공",images), HttpStatus.OK);
+        return new ResponseEntity<>(new CMRespDto<>(1,"이미지스토리 불러오기 성공",images), HttpStatus.OK);
     }
 
     // 좋아요
@@ -45,9 +44,7 @@ public class ImageApiController {
             @AuthenticationPrincipal PrincipalDetails principalDetails
     ){
         likesService.좋아요(imageId, principalDetails.getUser().getId());
-        return new ResponseEntity<>(
-//                new CMRespDto<>(1,"좋아요 성공",null),HttpStatus.OK);
-                new CMRespDto<>(1,"좋아요 성공",null),HttpStatus.CREATED);
+        return new ResponseEntity<>(new CMRespDto<>(1,"좋아요 성공",null),HttpStatus.CREATED);
     }
 
     // 좋아요 취소

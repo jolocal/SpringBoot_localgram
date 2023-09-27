@@ -1,6 +1,7 @@
 package com.local.localgram.domain.image;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.local.localgram.domain.comment.Comment;
 import com.local.localgram.domain.likes.Likes;
 import com.local.localgram.domain.user.User;
 import lombok.*;
@@ -41,6 +42,8 @@ public class Image {
     private int likeCount;
 
     //댓글
+    @OneToMany(mappedBy = "image") // default FetchType.LAZY
+    private List<Comment> comments; // N
 
     private LocalDateTime createDate;
     @PrePersist // DB에 INSERT 되기 직전에 실행

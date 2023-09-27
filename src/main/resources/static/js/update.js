@@ -5,7 +5,7 @@ function update(userId,event){
 
     // form 태그의 id값
     // serialize: form 태그 안에 모든 info값들
-    let data = $("#profileUpdate").serialize();
+    let data = $("#profileUpdate").serialize(); //key-value
 
     console.log(data);
 

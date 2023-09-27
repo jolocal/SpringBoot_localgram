@@ -40,6 +40,7 @@ function getStoryItem(image) {
         <!--유저네임-->
         <div>${image.user.username}</div>
     </div>
+    
     <!--이미지-->
     <div class="sl__item__img">
         <img src="/upload/${image.postImageUrl}" />
@@ -56,7 +57,7 @@ function getStoryItem(image) {
                     item +=`<i class="far fa-heart" id="storyLikeIcon-${image.id}" onclick="toggleLike(${image.id})"></i>`;
                 }
 
-    item += `
+        item += `
             </button>
         </div>
         
@@ -67,28 +68,33 @@ function getStoryItem(image) {
         <div class="sl__item__contents__content">
             <p>${image.caption}</p>
         </div>
+        
         <!--댓글-->
-        <div id="storyCommentList-1">
+        <div id="storyCommentList-${image.id}">`;
 
-            <div class="sl__item__contents__comment" id="storyCommentItem-1"">
-            <p>
-                <b>Lovely :</b> 부럽습니다.
-            </p>
+                image.comments.forEach((comment)=>{
+                    item += ` <div class="sl__item__contents__comment" id="storyCommentItem-${comment.id}">
+                        <p>
+                            <b>${comment.user.username}</b> ${comment.content}
+                        </p>
 
-            <button>
-                <i class="fas fa-times"></i>
-            </button>
+                        <button>
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>`;
 
-        </div>
+                });
 
+    item += `
     </div>
+    
     <!--댓글 작성-->
     <div class="sl__item__input">
-        <input type="text" placeholder="댓글 달기..." id="storyCommentInput-1" />
-        <button type="button" onClick="addComment()">게시</button>
+        <input type="text" placeholder="댓글 달기..." id="storyCommentInput-${image.id}" />
+        <button type="button" onClick="addComment(${image.id})">게시</button>
     </div>
 
-</div>
+  </div>
 </div>`;
 
     return item;
@@ -146,31 +152,51 @@ function toggleLike(imageId) {
 }
 
 // (4) 댓글쓰기
-function addComment() {
+function addComment(imageId) {
 
-    let commentInput = $("#storyCommentInput-1");
-    let commentList = $("#storyCommentList-1");
+    let commentInput = $(`#storyCommentInput-${imageId}`);
+    let commentList = $(`#storyCommentList-${imageId}`);
 
     let data = {
+        imageId: imageId,
         content: commentInput.val()
     }
+    console.log(data); // 자바스크립트 오브젝트
+    console.log(JSON.stringify(data)); // Json 오브젝트
 
     if (data.content === "") {
         alert("댓글을 작성해주세요!");
         return;
     }
 
-    let content = `
-			  <div class="sl__item__contents__comment" id="storyCommentItem-2""> 
-			    <p>
-			      <b>GilDong :</b>
-			      댓글 샘플입니다.
-			    </p>
-			    <button><i class="fas fa-times"></i></button>
-			  </div>
-	`;
-    commentList.prepend(content);
-    commentInput.val("");
+    // 서버 전송
+    $.ajax({
+        type:"post",
+        url:`/api/comment`,
+        data: JSON.stringify(data),
+        contentType: "application/json; charset=utf-8",
+        dataType: "json"
+    }).done(res=>{
+        console.log("성공",res);
+        let comment = res.data;
+
+        let content = `
+                  <div class="sl__item__contents__comment" id="storyCommentItem-${comment.id}"> 
+                    <p>
+                      <b>${comment.user.username}</b>
+                      ${comment.content}
+                    </p>
+                    <button><i class="fas fa-times"></i></button>
+                  </div>
+        `;
+        commentList.prepend(content);
+
+    }).fail(error=>{
+       console.log("오류",error);
+    });
+
+    commentInput.val(""); // 인풋태그를 깨끗하게 비워줌
+
 }
 
 // (5) 댓글 삭제

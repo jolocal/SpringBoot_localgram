@@ -4,17 +4,25 @@ import com.local.localgram.config.auth.PrincipalDetails;
 import com.local.localgram.domain.subscribe.SubscribeRepository;
 import com.local.localgram.domain.user.User;
 import com.local.localgram.domain.user.UserRepository;
+import com.local.localgram.handler.ex.CustomApiException;
 import com.local.localgram.handler.ex.CustomException;
 import com.local.localgram.handler.ex.CustomValidationApiException;
 import com.local.localgram.handler.ex.CustomValidationException;
 import com.local.localgram.web.dto.user.UserProfileDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 @Slf4j
@@ -24,6 +32,11 @@ public class UserService {
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder encoder;
     private final SubscribeRepository subscribeRepository;
+
+    // 5. yml 파일에 지정한 경로 호출
+    @Value("${file.path}")
+    private String uploadFolder;
+
     @Transactional(readOnly = true)
     public UserProfileDto 회원프로필(
             int pageUserId,
@@ -80,4 +93,30 @@ public class UserService {
         return userEntity;
         // 더티체킹이 일어나서 업데이트가 완료됨.
     }
+
+    @Transactional
+    public User 회원프로필사진변경(int principalId, MultipartFile profileImageFile) {
+        log.info("service start");
+        UUID uuid = UUID.randomUUID();
+
+        // uuid + _ + 이미지 파일 이름 설정
+        String imageFileName = uuid + "_" + profileImageFile.getOriginalFilename();
+        // 이미지 파일 경로 설정
+        Path imageFilePath = Paths.get(uploadFolder + imageFileName);
+
+        // 통신, I/O -> 에외가 발생할 수 있음
+        try {
+            Files.write(imageFilePath, profileImageFile.getBytes());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        User userEntity = userRepository.findById(principalId).orElseThrow(()->{
+            throw new CustomApiException("유저를 찾을 수 없습니다.");
+        });
+        userEntity.setProfileImageUrl(imageFileName);
+
+        return userEntity;
+
+    } // 더티체킹으로 업데이트 됨.
 }
