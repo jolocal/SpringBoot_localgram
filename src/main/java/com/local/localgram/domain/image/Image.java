@@ -43,7 +43,6 @@ public class Image {
     //댓글
 
     private LocalDateTime createDate;
-
     @PrePersist // DB에 INSERT 되기 직전에 실행
     public void createDate(){
         this.createDate = LocalDateTime.now();
