@@ -46,7 +46,6 @@ public class ImageController {
             ImageUploadDto imageUploadDto,
             @AuthenticationPrincipal PrincipalDetails principalDetails
     ){
-        log.info("imageUploadDto : {}",imageUploadDto);
         if (imageUploadDto.getFile().isEmpty()){
             log.info("이미지가 첨부되지 않았습니다.");
             throw new CustomValidationException("이미지가 첨부되지 않았습니다.",null);

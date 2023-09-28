@@ -170,6 +170,7 @@ function addComment(imageId) {
     console.log(data); // 자바스크립트 오브젝트
     console.log(JSON.stringify(data)); // Json 오브젝트
 
+
     if (data.content === "") {
         alert("댓글을 작성해주세요!");
         return;
@@ -201,6 +202,7 @@ function addComment(imageId) {
 
     }).fail(error=>{
        console.log("오류",error);
+       alert(error.responseJSON.data.content);
     });
 
     commentInput.val(""); // 인풋태그를 깨끗하게 비워줌

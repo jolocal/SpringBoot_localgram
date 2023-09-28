@@ -38,23 +38,10 @@ public class AuthController {
             @Valid SignupDto signupDto, //key=value (x-www-form-urlencoded)
             BindingResult bindingResult
     ){
-        // 유효성 검사 실패시
-        if (bindingResult.hasErrors()){
-            Map<String, String> errorMap = new HashMap<>();
-
-            for (FieldError error : bindingResult.getFieldErrors()){
-                errorMap.put(error.getField(),error.getDefaultMessage());
-                log.info(error.getDefaultMessage());
-            }
-            throw new CustomValidationException("유효성 검사 실패함",errorMap);
-
-        // 유효성 검사 성공
-        } else {
             // User <- SignupDto
             User user = signupDto.toEntity();
             User userEntity = authService.회원가입(user);
             return "auth/signin";
-        }
 
     }
 }
