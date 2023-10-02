@@ -7,13 +7,13 @@
 ## 개발 기간
 
 ## 개발 환경
-- Language : `Java 11`
-- Framework : Spring Boot (2.x)
-- Authorization : Spring Security
-- **ORM** : Spring Data JPA, Querydsl
-- **Database** : Maria DB
-- **IDE** : IntelliJ
-- API Test : Postman
+- **Language** : `Java 11`
+- **Framework** : `Spring Boot (2.x)`
+- **Authorization** : `Spring Security`
+- **ORM** : `Spring Data JPA`, `Querydsl`
+- **Database** : `Maria DB`
+- **IDE** : `IntelliJ`
+- **API Test** : `Postman`
 
 
 ** 주요 기능
