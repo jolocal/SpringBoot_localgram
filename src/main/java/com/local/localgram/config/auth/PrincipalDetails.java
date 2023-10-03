@@ -4,17 +4,24 @@ import com.local.localgram.domain.user.User;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Map;
 
 @Data
-public class PrincipalDetails implements UserDetails {
+public class PrincipalDetails implements UserDetails, OAuth2User {
     private static final long serialVersionUID = 1L;
 
     private User user;
+    private Map<String, Object> attribute;
 
     public PrincipalDetails(User user) {
+        this.user = user;
+    }
+
+    public PrincipalDetails(User user, Map<String, Object> attribute) {
         this.user = user;
     }
 
@@ -56,5 +63,13 @@ public class PrincipalDetails implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+    @Override
+    public Map<String, Object> getAttributes() { // {id:6512654, name:조현지, email:local02070@gmail.com}
+        return attribute;
+    }
+    @Override
+    public String getName() {
+        return (String) attribute.get("name");
     }
 }
