@@ -17,7 +17,7 @@ public class AuthService {
 
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder encoder;
-    @Transactional //Write(Insert,Update, Delete)
+    @Transactional // Write(Insert,Update, Delete)
     public User 회원가입(User user){
         // 회원가입 진행
 
