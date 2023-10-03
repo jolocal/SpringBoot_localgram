@@ -4,8 +4,6 @@
 ## 프로젝트 소개
 인스타그램의 핵심 기능을 구현한 프로젝트입니다.
 
-## 개발 기간
-
 ## 개발 환경
 - **Language** : `Java 11`
 - **Framework** : `Spring Boot (2.x)`
@@ -17,6 +15,7 @@
 
 
 ## 사용 기술
+
 #### JPA
 - 연관관계 ManyToOne, OneToMany, ManyToMany
 - 무한참조 방지
@@ -35,6 +34,7 @@
 
 
 ## 주요 기능
+
 #### 로그인
 - DB값 검증
 - ID 찾기, PW 찾기
