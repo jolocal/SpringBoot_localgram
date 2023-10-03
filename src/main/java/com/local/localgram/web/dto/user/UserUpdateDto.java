@@ -9,8 +9,7 @@ import javax.validation.constraints.NotBlank;
 public class UserUpdateDto {
     @NotBlank
     private String name; // 필수값
-    @NotBlank
-    private String password; // 필수값
+    private String password;
     private String website;
     private String bio;
     private String phone;

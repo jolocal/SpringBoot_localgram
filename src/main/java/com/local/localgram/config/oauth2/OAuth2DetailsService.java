@@ -1,5 +1,6 @@
 package com.local.localgram.config.oauth2;
 
+import com.local.localgram.config.auth.PrincipalDetails;
 import com.local.localgram.domain.user.User;
 import com.local.localgram.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -12,6 +13,7 @@ import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
+import java.util.UUID;
 
 @RequiredArgsConstructor
 @Service
@@ -19,7 +21,6 @@ import java.util.Map;
 public class OAuth2DetailsService extends DefaultOAuth2UserService {
 
     private final UserRepository userRepository;
-    private final BCryptPasswordEncoder encoder;
     @Override
     public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
 
@@ -31,10 +32,8 @@ public class OAuth2DetailsService extends DefaultOAuth2UserService {
         Map<String,Object> userInfo = oAuth2User.getAttributes();
 
         String username = "facebook_" + (String) userInfo.get("id");
-
-        String rawPassword = (String) userInfo.get("password");
-        String password = encoder.encode(rawPassword);
-
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        String password = encoder.encode(UUID.randomUUID().toString());
         String email = (String) userInfo.get("email");
         String name = (String) userInfo.get("name");
 
@@ -47,9 +46,10 @@ public class OAuth2DetailsService extends DefaultOAuth2UserService {
                     .email(email)
                     .name(name)
                     .build();
-            userEntity = userRepository.save(user);
-        }
 
-        return null;
+            return new PrincipalDetails(userRepository.save(user), oAuth2User.getAttributes());
+        } else {
+            return new PrincipalDetails(userEntity, oAuth2User.getAttributes());
+        }
     }
 }

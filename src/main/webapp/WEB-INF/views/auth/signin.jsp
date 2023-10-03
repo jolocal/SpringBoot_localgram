@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photogram</title>
+    <title>localgram</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -40,7 +40,7 @@
                     <!-- 또는end -->
 
                     <!-- Oauth 소셜로그인 -->
-                    <div class="login__facebook">
+                    <div class="login__facebook" onclick="location.href='/oauth2/authorization/facebook'">
                         <button>
                             <i class="fab fa-facebook-square"></i>
                             <span>Facebook으로 로그인</span>

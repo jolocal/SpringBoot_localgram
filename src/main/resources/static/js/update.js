@@ -17,6 +17,7 @@ function update(userId,event){
         dataType: "json" // 응답받을 데이터를 json으로 파싱
     }).done(res=>{ // HttpStatus 상태코드 200번대
         console.log("성공",res);
+        alert("회원정보가 성공적으로 수정되었습니다.");
         location.href = `/user/${userId}`;
     }).fail(error=>{ // HttpStatus 상태코드 200번대가 아닐 때
         console.log(error);

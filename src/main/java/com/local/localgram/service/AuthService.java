@@ -2,6 +2,8 @@ package com.local.localgram.service;
 
 import com.local.localgram.domain.user.User;
 import com.local.localgram.domain.user.UserRepository;
+import com.local.localgram.handler.ex.CustomException;
+import com.local.localgram.handler.ex.CustomValidationException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -21,14 +23,17 @@ public class AuthService {
 
         // 비밀번호 암호화
         String rawPassword = user.getPassword();
-        log.info("rawPassword: {}", rawPassword);
         String encPassword = encoder.encode(rawPassword);
-        log.info("encPassword: {}", rawPassword);
         user.setPassword(encPassword);
+
         // 권한 설정
         user.setRole("ROLE_USER"); //관리자 ROLE_ADMIN
 
-        User userEntity = userRepository.save(user);
-        return userEntity;
+        User userEntity = userRepository.findByUsername(user.getUsername());
+        if (userEntity == null){
+            return userRepository.save(user);
+        } else {
+            throw new CustomValidationException("이미 존재하는 아이디입니다.");
+        }
     }
 }

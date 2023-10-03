@@ -34,13 +34,13 @@
                 <div class="item__title">유저네임</div>
                 <div class="item__input">
                     <input type="text" name="username" placeholder="유저네임"
-                           value="${principal.user.username}" readonly="readonly"  />
+                           value="${principal.user.username}" readonly="readonly" />
                 </div>
             </div>
             <div class="content-item__04">
                 <div class="item__title">패스워드</div>
                 <div class="item__input">
-                    <input type="password" name="password" placeholder="패스워드"  />
+                    <input type="password" name="password" placeholder="패스워드" />
                 </div>
             </div>
             <div class="content-item__05">
