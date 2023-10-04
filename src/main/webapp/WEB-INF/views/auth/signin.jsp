@@ -43,7 +43,19 @@
                     <div class="login__facebook">
                         <button onclick="location.href='/oauth2/authorization/facebook';">
                             <i class="fab fa-facebook-square"></i>
-                            <span>Facebook으로 로그인</span>
+                            <span>Facebook 로그인</span>
+                        </button>
+                        <button onclick="location.href='/oauth2/authorization/kakao';">
+                            <i class="fab fa-facebook-square"></i>
+                            <span>kakao 로그인</span>
+                        </button>
+                        <button onclick="location.href='/oauth2/authorization/naver';">
+                            <i class="fab fa-facebook-square"></i>
+                            <span>naver 로그인</span>
+                        </button>
+                        <button onclick="location.href='/oauth2/authorization/google';">
+                            <i class="fab fa-facebook-square"></i>
+                            <span>google 로그인</span>
                         </button>
                     </div>
                     <!-- Oauth 소셜로그인end -->

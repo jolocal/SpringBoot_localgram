@@ -1,6 +1,9 @@
-package com.local.localgram.config.oauth2;
+package com.local.localgram.config.oauth2.service;
 
 import com.local.localgram.config.auth.PrincipalDetails;
+import com.local.localgram.config.oauth2.model.FacebookUserInfo;
+import com.local.localgram.config.oauth2.model.GoogleUserInfo;
+import com.local.localgram.config.oauth2.model.OAuth2UserInfo;
 import com.local.localgram.domain.user.User;
 import com.local.localgram.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -27,17 +30,34 @@ public class OAuth2DetailsService extends DefaultOAuth2UserService {
 
         OAuth2User oAuth2User = super.loadUser(userRequest);
 
-        // 사용자가 가지고있는 정보
+        // 사용자 정보 불러오기
         Map<String,Object> userInfo = oAuth2User.getAttributes();
 
-        // 내 서버에 회원가입 정보 넣기
-        String username = "facebook_" + (String) userInfo.get("id");
-        String email = (String) userInfo.get("email");
-        String name = (String) userInfo.get("name");
+        OAuth2UserInfo oAuth2UserInfo = null;
+        if (userRequest.getClientRegistration().getRegistrationId().equals("facebook")){
+            log.info("페이스북 로그인 요청");
+            oAuth2UserInfo = new FacebookUserInfo(oAuth2User.getAttributes());
+        }
+        if (userRequest.getClientRegistration().getRegistrationId().equals("google")){
+            log.info("구글 로그인 요청");
+            log.info("userInfo:{}",userInfo);
+            oAuth2UserInfo = new GoogleUserInfo(oAuth2User.getAttributes());
+        }
+
+        String username = oAuth2UserInfo.getProvider() + oAuth2UserInfo.getUsername();
         String password = new BCryptPasswordEncoder().encode(UUID.randomUUID().toString());
+        String email = oAuth2UserInfo.getEmail();
+        String name = oAuth2UserInfo.getName();
+
+/*        // 내 서버에 회원가입 정보 넣기
+        String username = (String) userInfo.get("id");
+        String email = (String) userInfo.get("email");
+        String name = "facebook_" + (String) userInfo.get("name");
+        String password = new BCryptPasswordEncoder().encode(UUID.randomUUID().toString());*/
 
         User userEntity = userRepository.findByUsername(username);
-        // facebook 최초 로그인
+
+        // 최초 로그인
         if (userEntity == null){
 
             User user = User.builder()
@@ -50,7 +70,6 @@ public class OAuth2DetailsService extends DefaultOAuth2UserService {
 
             return new PrincipalDetails(userRepository.save(user), oAuth2User.getAttributes());
 
-            // 이미 facebook으로 회원가입 됨
         } else {
             return new PrincipalDetails(userEntity, oAuth2User.getAttributes());
         }
