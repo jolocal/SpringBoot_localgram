@@ -1,5 +1,9 @@
-## 프로젝트 소개
+## :computer: 프로젝트 소개
 인스타그램 클론 코딩은 `Spring Boot`와 `JPA`를 사용하여 이미지 기반 소셜 미디어 인스타그램 서비스를 구현한 프로젝트입니다.
+
+## :pencil2: NOTION
+[NOTION 바로가기](https://www.notion.so/83bfdf81e7dd411881f3ab37a3e8a27f?v=1e7b082fe56f40d1af3ab8846e08ccdc&pvs=4)
+
 
 ## 개발 환경
 - **Language** : `Java 11`
@@ -11,7 +15,7 @@
 - **API Test** : `Postman`
 
 
-## 사용 기술
+## :mag_right: 사용 기술
 
 #### JPA
 - 연관관계 ManyToOne, OneToMany, ManyToMany
