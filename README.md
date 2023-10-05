@@ -5,7 +5,7 @@
 [NOTION 바로가기](https://www.notion.so/83bfdf81e7dd411881f3ab37a3e8a27f?v=1e7b082fe56f40d1af3ab8846e08ccdc&pvs=4)
 
 
-## 개발 환경
+## :low_brightness: 개발 환경
 - **Language** : `Java 11`
 - **Framework** : `Spring Boot (2.x)`
 - **Authorization** : `Spring Security`
@@ -57,7 +57,7 @@
 
 
 #### 인기 페이지
-- 좋아요,좋아요취소
+- 좋아요가 많은 순으로 뷰 랜더링
 
 
 #### 팔로우
@@ -65,7 +65,7 @@
 - 언팔로우
 
 
-#### 마이 페이지
+#### 프로필 페이지
 - 구독,구독 취소하기
 - 프로필 이미지 등록
 - 회원 프로필 수정
