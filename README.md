@@ -26,7 +26,7 @@
   
 #### 스프링부트 open-in-view와 Lazy loading
 #### ResponseEntity와 공통 응답을 위한 DTO
-#### 커스텀 예외 핸들링
+#### 커스텀 예외 핸들링 - [상세보기)(https://github.com/jolocal/SpringBoot_localgram/wiki/%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%98%88%EC%99%B8-%ED%95%B8%EB%93%A4%EB%A7%81)
 #### AOP를 이용하여 유효성 검사 자동화 - [상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/AOP%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-%EC%9C%A0%ED%9A%A8%EC%84%B1-%EA%B2%80%EC%82%AC-%EC%9E%90%EB%8F%99%ED%99%94#aop%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-%EC%9C%A0%ED%9A%A8%EC%84%B1-%EA%B2%80%EC%82%AC-%EC%9E%90%EB%8F%99%ED%99%94)
 #### 스프링 시큐리티
 #### OAuth2
