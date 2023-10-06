@@ -38,7 +38,7 @@
 #### 회원가입
 
 <p align="center">
-  <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/b5c95c12-f7df-4947-b5cc-8b794c3ec23b">
+  <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/2bae01fb-9f66-427c-b735-68ef681532bc">
 </p>
 
 - 주소 API 연동
