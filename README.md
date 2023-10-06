@@ -70,6 +70,6 @@
 
   
 <p align="left">
-  <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/b362ee38-f32d-40b4-aa9a-b9cc19813fe4">
+  <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/47c54336-118c-432b-a642-f91181766678">
 </p>
 
