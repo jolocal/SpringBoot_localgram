@@ -36,6 +36,9 @@
   
 
 #### 회원가입
+![Photogram - Chrome 2023-10-06 20-14-28](https://github.com/jolocal/SpringBoot_localgram/assets/129312146/a270ecbd-8886-4646-8ab4-ff3204862460)
+
+
 - 주소 API 연동
 - ID 중복 체크
 - 프론트,백엔드 유효성 검사
