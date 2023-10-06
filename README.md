@@ -69,7 +69,7 @@
 - 게시물 업로드
 
   
-<p align="center">
+<p align="left">
   <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/b362ee38-f32d-40b4-aa9a-b9cc19813fe4">
 </p>
 
