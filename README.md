@@ -36,9 +36,11 @@
   
 
 #### 회원가입
+
 <p align="center">
   <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/b5c95c12-f7df-4947-b5cc-8b794c3ec23b">
 </p>
+
 - 주소 API 연동
 - ID 중복 체크
 - 프론트,백엔드 유효성 검사
