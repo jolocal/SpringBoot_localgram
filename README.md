@@ -35,18 +35,23 @@
 - 로그아웃
   
 
-#### 회원가입 - [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85#computer-%EC%8B%9C%EC%97%B0%EC%98%81%EC%83%81)
+#### 회원가입 
+
 
 <details>
 <summary>시연 영상 보기</summary>
+  
 <p align="center">
   <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/0f2863b8-ae45-4400-b4eb-9ee27fa827f5">
 </p>
+
 </details>
+
 
 - 회원가입시 중복 체크
 - 프론트,백엔드 유효성 검사
 - 글로벌 예외 처리하기
+- [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85#computer-%EC%8B%9C%EC%97%B0%EC%98%81%EC%83%81)
 
 
 #### 스토리 페이지
