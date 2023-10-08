@@ -27,7 +27,7 @@
 
 ## :pushpin: 주요 기능
 
-#### 로그인
+#### 로그인 - [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%EB%A1%9C%EA%B7%B8%EC%9D%B8)
 
 
 <details>
@@ -39,8 +39,6 @@
 
 </details>
 
-
-- [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%EB%A1%9C%EA%B7%B8%EC%9D%B8)
   
 - 스프링 시큐리티
 - DB값 검증
@@ -48,7 +46,7 @@
 - OAuth2 로그인
 
 
-#### 회원가입 
+#### 회원가입 - [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85#computer-%EC%8B%9C%EC%97%B0%EC%98%81%EC%83%81)
 
 
 <details>
@@ -64,7 +62,6 @@
 - 회원가입시 중복 체크
 - 프론트,백엔드 유효성 검사
 - 글로벌 예외 처리하기
-- [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85#computer-%EC%8B%9C%EC%97%B0%EC%98%81%EC%83%81)
 
 
 #### 스토리 페이지
