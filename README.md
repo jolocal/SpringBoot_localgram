@@ -87,7 +87,8 @@
 - 좋아요가 많은 순으로 뷰 랜더링
 
 
-#### 팔로우
+#### 팔로우 - [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%ED%8C%94%EB%A1%9C%EC%9A%B0)
+
 - 팔로우
 - 언팔로우
 
