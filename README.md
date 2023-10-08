@@ -31,7 +31,7 @@
 
 
 <details>
-<summary>시연 영상 보기</summary>
+<summary> :video_camera: 시연 영상 보기</summary>
   
 <p align="center">
   <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/bc605a94-e2d6-418a-90f9-34112f7ea17e">
@@ -50,7 +50,7 @@
 
 
 <details>
-<summary>시연 영상 보기</summary>
+<summary> :video_camera: 시연 영상 보기</summary>
   
 <p align="center">
   <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/0f2863b8-ae45-4400-b4eb-9ee27fa827f5">
@@ -68,7 +68,7 @@
 
 
 <details>
-<summary>시연 영상 보기</summary>
+<summary> :video_camera: 시연 영상 보기</summary>
   
 <p align="center">
   <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/d9e08b0d-e20a-4b4a-a47e-c8c5ddba531c">
