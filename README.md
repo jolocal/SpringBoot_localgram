@@ -71,7 +71,7 @@
 <summary>시연 영상 보기</summary>
   
 <p align="center">
-  <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/51b29a2e-e641-4d49-b90d-b98b4f737853">
+  <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/d9e08b0d-e20a-4b4a-a47e-c8c5ddba531c">
 </p>
 
 </details>
