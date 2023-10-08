@@ -65,6 +65,18 @@
 
 
 #### 스토리 페이지
+
+
+<details>
+<summary>시연 영상 보기</summary>
+  
+<p align="center">
+  <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/7d3dcadd-1e36-486b-88da-64315b5d72a3">
+</p>
+
+</details>
+
+
 - 게시물 무한 스크롤 조회
 - 게시물 좋아요,좋아요 취소
 - 댓글 등록,수정,삭제
