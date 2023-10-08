@@ -82,7 +82,8 @@
 - 댓글 등록,삭제
 
 
-#### 인기 페이지
+#### 인기 페이지 - [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%EC%9D%B8%EA%B8%B0%ED%8E%98%EC%9D%B4%EC%A7%80)
+
 - 좋아요가 많은 순으로 뷰 랜더링
 
 
