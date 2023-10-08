@@ -28,6 +28,18 @@
 ## :pushpin: 주요 기능
 
 #### 로그인
+
+
+<details>
+<summary>시연 영상 보기</summary>
+  
+<p align="center">
+  <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/bc605a94-e2d6-418a-90f9-34112f7ea17e">
+</p>
+
+</details>
+
+
 - [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%EB%A1%9C%EA%B7%B8%EC%9D%B8)
   
 - 스프링 시큐리티
