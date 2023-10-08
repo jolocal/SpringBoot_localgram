@@ -28,12 +28,12 @@
 ## :pushpin: 주요 기능
 
 #### 로그인
+- 스프링 시큐리티
 - DB값 검증
-- ID 찾기, PW 찾기
-- 로그인 시 쿠키(Cookie) 및 세션(Session) 생성
+- 로그인시 일반 로그인과 OAuth2 로그인 통합세션 관리
 - OAuth2 로그인
-- 로그아웃
-  
+- [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%EB%A1%9C%EA%B7%B8%EC%9D%B8)
+
 
 #### 회원가입 
 
