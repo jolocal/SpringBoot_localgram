@@ -31,7 +31,7 @@
 
 
 <details>
-<summary> :video_camera: 시연 영상 보기</summary>
+<summary> :video_camera: **시연 영상 보기**</summary>
   
 <p align="center">
   <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/bc605a94-e2d6-418a-90f9-34112f7ea17e">
