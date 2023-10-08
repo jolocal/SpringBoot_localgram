@@ -27,7 +27,7 @@
 
 ## :pushpin: 주요 기능
 
-#### 로그인 - [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%EB%A1%9C%EA%B7%B8%EC%9D%B8)
+### 로그인 - [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%EB%A1%9C%EA%B7%B8%EC%9D%B8)
 
 
 <details>
@@ -46,7 +46,7 @@
 - OAuth2 로그인
 
 
-#### 회원가입 - [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85#computer-%EC%8B%9C%EC%97%B0%EC%98%81%EC%83%81)
+### 회원가입 - [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85#computer-%EC%8B%9C%EC%97%B0%EC%98%81%EC%83%81)
 
 
 <details>
@@ -64,7 +64,7 @@
 - 글로벌 예외 처리하기
 
 
-#### 스토리 페이지 - [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%EC%8A%A4%ED%86%A0%EB%A6%AC-%ED%8E%98%EC%9D%B4%EC%A7%80)
+### 스토리 페이지 - [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%EC%8A%A4%ED%86%A0%EB%A6%AC-%ED%8E%98%EC%9D%B4%EC%A7%80)
 
 
 <details>
@@ -82,18 +82,18 @@
 - 댓글 등록,삭제
 
 
-#### 인기 페이지 - [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%EC%9D%B8%EA%B8%B0%ED%8E%98%EC%9D%B4%EC%A7%80)
+### 인기 페이지 - [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%EC%9D%B8%EA%B8%B0%ED%8E%98%EC%9D%B4%EC%A7%80)
 
 - 좋아요가 많은 순으로 뷰 랜더링
 
 
-#### 팔로우 - [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%ED%8C%94%EB%A1%9C%EC%9A%B0)
+### 팔로우 - [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%ED%8C%94%EB%A1%9C%EC%9A%B0)
 
 - 팔로우
 - 언팔로우
 
 
-#### 프로필 페이지
+### 프로필 페이지
 - 구독,구독 취소하기
 - 프로필 이미지 등록
 - 회원 프로필 수정
