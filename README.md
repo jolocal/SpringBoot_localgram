@@ -36,16 +36,17 @@
 </p>
 </details>
 
-- 스프링 시큐리티
-- DB값 검증
-- 로그인시 일반 로그인과 OAuth2 로그인 통합세션 관리
-- OAuth2 로그인
 <details>
 <summary> :video_camera: 시연 영상 보기</summary>
 <p align="center">
   <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/7e72dfcd-04d2-487c-9f36-fe1615231667">
 </p>
 </details>
+
+- 스프링 시큐리티
+- DB값 검증
+- 로그인시 일반 로그인과 OAuth2 로그인 통합세션 관리
+- OAuth2 로그인
 
 ### 회원가입 - [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85#computer-%EC%8B%9C%EC%97%B0%EC%98%81%EC%83%81)
 
