@@ -97,8 +97,16 @@
 
 
 ### 프로필 페이지 - [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%ED%94%84%EB%A1%9C%ED%95%84%ED%8E%98%EC%9D%B4%EC%A7%80)
+
+<details>
+<summary> :video_camera: 시연 영상 보기</summary>
+<p align="center">
+  <i>프로필 이미지 등록</i>
+  <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/87b215b2-7c50-43eb-9a58-1ce67e6cbe12">
+</p>
+</details>
+
 - 프로필 이미지 등록
 - 회원 프로필 수정
 - 게시물 업로드
-
 
