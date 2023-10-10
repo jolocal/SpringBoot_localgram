@@ -40,7 +40,6 @@
 - DB값 검증
 - 로그인시 일반 로그인과 OAuth2 로그인 통합세션 관리
 - OAuth2 로그인
-- 
 <details>
 <summary> :video_camera: 시연 영상 보기</summary>
 <p align="center">
