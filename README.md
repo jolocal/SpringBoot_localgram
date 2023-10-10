@@ -109,9 +109,13 @@
   <p>회원 프로필 수정</p>
   <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/d542010f-2eb9-45a0-9042-ea435bd1c902">
 </p>
+
+<p align="center">
+  <p>게시물 업로드</p>
+  <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/799dd930-5584-429a-842a-fa873620c435">
+</p>
 </details>
 
 - 프로필 이미지 등록
 - 회원 프로필 수정
 - 게시물 업로드
-
