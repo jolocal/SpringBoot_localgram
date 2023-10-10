@@ -31,11 +31,9 @@
 
 <details>
 <summary> :video_camera: 시연 영상 보기</summary>
-  
 <p align="center">
   <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/bc605a94-e2d6-418a-90f9-34112f7ea17e">
 </p>
-
 </details>
 
 - 스프링 시큐리티
@@ -48,11 +46,9 @@
 
 <details>
 <summary> :video_camera: 시연 영상 보기</summary>
-  
 <p align="center">
   <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/0f2863b8-ae45-4400-b4eb-9ee27fa827f5">
 </p>
-
 </details>
 
 - 회원가입시 중복 체크
@@ -64,19 +60,24 @@
 
 <details>
 <summary> :video_camera: 시연 영상 보기</summary>
-  
 <p align="center">
   <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/d9e08b0d-e20a-4b4a-a47e-c8c5ddba531c">
 </p>
-
 </details>
 
 - 게시물 무한 스크롤 조회
 - 게시물 좋아요,좋아요 취소
 - 댓글 등록,삭제
 
-
 ### 인기 페이지 - [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%EC%9D%B8%EA%B8%B0%ED%8E%98%EC%9D%B4%EC%A7%80)
+
+<details>
+<summary> :video_camera: 시연 영상 보기</summary>
+<p align="center">
+  <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/cb624c43-f97e-4a1c-8e26-982966d29878">
+</p>
+</details>
+
 - 좋아요가 많은 순으로 뷰 랜더링
 
 
