@@ -101,8 +101,10 @@
 <details>
 <summary> :video_camera: 시연 영상 보기</summary>
 <p align="center">
-  <i>프로필 이미지 등록</i>
+  <ul>프로필 이미지 등록</ul>
+  <li>
   <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/87b215b2-7c50-43eb-9a58-1ce67e6cbe12">
+  </li>
 </p>
 </details>
 
