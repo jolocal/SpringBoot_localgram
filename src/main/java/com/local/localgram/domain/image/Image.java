@@ -8,9 +8,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.List;
-
-@Data
+import java.util.List;@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -53,3 +51,4 @@ public class Image {
         this.createDate = LocalDateTime.now();
     }
 }
+

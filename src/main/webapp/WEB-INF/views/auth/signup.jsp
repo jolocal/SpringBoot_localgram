@@ -22,7 +22,7 @@
                 <!--회원가입 폼-->
                 <div class="login__form">
                     <!--로고-->
-                    <h1><img src="/images/logo.jpg" alt=""></h1>
+                    <h1><img src="/images/logo.png" alt=""></h1>
                     <!--로고end-->
 
                     <!--회원가입 인풋-->

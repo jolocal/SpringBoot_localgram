@@ -12,7 +12,6 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 // JPA - Java Persistence API (자바로 데이터를 영구적으로 저장(DB)할 수 있는 API를 제공)
-
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -32,7 +31,6 @@ public class User {
     private String name;
     private String website;
     private String bio; // 자기소개
-    @Column(nullable = false)
     private String email;
     private String phone;
     private String gender;

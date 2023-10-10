@@ -1,9 +1,7 @@
 package com.local.localgram.config.oauth2.service;
 
 import com.local.localgram.config.auth.PrincipalDetails;
-import com.local.localgram.config.oauth2.model.FacebookUserInfo;
-import com.local.localgram.config.oauth2.model.GoogleUserInfo;
-import com.local.localgram.config.oauth2.model.OAuth2UserInfo;
+import com.local.localgram.config.oauth2.model.*;
 import com.local.localgram.domain.user.User;
 import com.local.localgram.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -43,17 +41,23 @@ public class OAuth2DetailsService extends DefaultOAuth2UserService {
             log.info("userInfo:{}",userInfo);
             oAuth2UserInfo = new GoogleUserInfo(oAuth2User.getAttributes());
         }
+        if (userRequest.getClientRegistration().getRegistrationId().equals("naver")){
+            log.info("네이버 로그인 요청");
+            log.info("userInfo:{}",userInfo);
+            oAuth2UserInfo = new NaverUserInfo((Map<String, Object>) oAuth2User.getAttributes().get("response"));
+        }
+        if (userRequest.getClientRegistration().getRegistrationId().equals("kakao")){
+            log.info("카카오 로그인 요청");
+            log.info("userInfo:{}",userInfo);
+            oAuth2UserInfo = new KakaoUserInfo((Map)oAuth2User.getAttributes());
+            log.info("getAttributes : {}",oAuth2User.getAttributes());
+        }
 
         String username = oAuth2UserInfo.getProvider() + oAuth2UserInfo.getUsername();
         String password = new BCryptPasswordEncoder().encode(UUID.randomUUID().toString());
         String email = oAuth2UserInfo.getEmail();
         String name = oAuth2UserInfo.getName();
 
-/*        // 내 서버에 회원가입 정보 넣기
-        String username = (String) userInfo.get("id");
-        String email = (String) userInfo.get("email");
-        String name = "facebook_" + (String) userInfo.get("name");
-        String password = new BCryptPasswordEncoder().encode(UUID.randomUUID().toString());*/
 
         User userEntity = userRepository.findByUsername(username);
 

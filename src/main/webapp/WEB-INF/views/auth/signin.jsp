@@ -21,7 +21,7 @@
             <article class="login__form__container">
                 <!--로그인 폼-->
                 <div class="login__form">
-                    <h1><img src="/images/logo.jpg" alt=""></h1>
+                    <h1><img src="/images/logo.png" alt=""></h1>
 
                     <!--로그인 인풋-->
                     <form class="login__input"  action="/auth/signin" method="POST">
@@ -46,16 +46,13 @@
                             <span>Facebook 로그인</span>
                         </button>
                         <button onclick="location.href='/oauth2/authorization/kakao';">
-                            <i class="fab fa-facebook-square"></i>
-                            <span>kakao 로그인</span>
+                            <span><img src="/images/kakao_login_medium_narrow.png" height="35px"/></span>
                         </button>
                         <button onclick="location.href='/oauth2/authorization/naver';">
-                            <i class="fab fa-facebook-square"></i>
-                            <span>naver 로그인</span>
+                            <span><img src="/images/btnG_완성형.png" width="142px" height="35px"/></span>
                         </button>
                         <button onclick="location.href='/oauth2/authorization/google';">
-                            <i class="fab fa-facebook-square"></i>
-                            <span>google 로그인</span>
+                            <span><img src="/images/btn_google_signin_light_normal_web.png"height="35px"/></span>
                         </button>
                     </div>
                     <!-- Oauth 소셜로그인end -->
