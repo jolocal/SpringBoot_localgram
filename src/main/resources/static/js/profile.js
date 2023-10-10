@@ -91,16 +91,18 @@ function getSubscribeModalItem(u) {
 
 // (3) 유저 프로파일 사진 변경 (완)
 function profileImageUpload(pageUserId, principalId) {
+/*
     console.log("pageUserId: ",pageUserId);
     console.log("principalId: ",principalId);
+*/
 
-    if( pageUserId != principalId){
+    if(pageUserId != principalId){
         alert("수정할 권한이 없습니다.");
         return;
     }
 
     $("#userProfileImageInput").click();
-
+    $("#userProfileImageInput").off("change");
     $("#userProfileImageInput").on("change", (e) => {
         let f = e.target.files[0];
 
@@ -109,13 +111,12 @@ function profileImageUpload(pageUserId, principalId) {
             return;
         }
 
-    // 서버에 이미지 전송
-    let profileImageForm = $("#userProfileImageForm")[0];
-    console.log(profileImageForm);
+        // 서버에 이미지 전송
+        let profileImageForm = $("#userProfileImageForm")[0];
+        console.log(profileImageForm);
 
-    // FormData 객체를 이용하면 form 태그의 필드와 그 값을 나타내는 일련의 key/value 쌍을 담을 수 있슴
-    let formData = new FormData(profileImageForm);
-
+        // FormData 객체를 이용하면 form 태그의 필드와 그 값을 나타내는 일련의 key/value 쌍을 담을 수 있슴
+        let formData = new FormData(profileImageForm);
 
         $.ajax({
             type       : "put",
@@ -126,7 +127,6 @@ function profileImageUpload(pageUserId, principalId) {
             enctype    : "multipart/form-data",
             dataType   : "json"
         }).done(res => {
-            console.log("성공",res);
             // 사진 전송 성공시 이미지 변경
             let reader = new FileReader();
             reader.onload = (e) => {
@@ -137,7 +137,6 @@ function profileImageUpload(pageUserId, principalId) {
         }).fail(error => {
             console.log("오류", error);
         });
-
     });
 }
 
