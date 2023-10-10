@@ -80,8 +80,15 @@
 
 - 좋아요가 많은 순으로 뷰 랜더링
 
-
 ### 팔로우 - [코드 상세보기](https://github.com/jolocal/SpringBoot_localgram/wiki/%5B%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%5D-%ED%8C%94%EB%A1%9C%EC%9A%B0)
+
+<details>
+<summary> :video_camera: 시연 영상 보기</summary>
+<p align="center">
+  <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/4867385b-e5cd-48c0-a354-998db98748d9">
+</p>
+</details>
+
 - 팔로우
 - 언팔로우
 
