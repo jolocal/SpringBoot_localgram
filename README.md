@@ -33,12 +33,6 @@
 <summary> :video_camera: 시연 영상 보기</summary>
 <p align="center">
   <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/bc605a94-e2d6-418a-90f9-34112f7ea17e">
-</p>
-</details>
-
-<details>
-<summary> :video_camera: 시연 영상 보기</summary>
-<p align="center">
   <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/7e72dfcd-04d2-487c-9f36-fe1615231667">
 </p>
 </details>
