@@ -101,12 +101,12 @@
 <details>
 <summary> :video_camera: 시연 영상 보기</summary>
 <p align="center">
-  프로필 이미지 등록
+  <p>프로필 이미지 등록</p>
   <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/87b215b2-7c50-43eb-9a58-1ce67e6cbe12">
 </p>
 
 <p align="center">
-  회원 프로필 수정
+  <p>회원 프로필 수정</p>
   <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/d542010f-2eb9-45a0-9042-ea435bd1c902">
 </p>
 </details>
