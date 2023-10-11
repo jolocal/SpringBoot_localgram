@@ -14,11 +14,12 @@
 - **Language** : `Java 11`
 - **Framework** : `Spring Boot (2.x)`
 - **Authorization** : `Spring Security`
-- **ORM** : `Spring Data JPA`, `Querydsl`
+- **ORM** : `Spring Data JPA`
 - **Database** : `Maria DB`
 - **IDE** : `IntelliJ`
 - **API Test** : `Postman`
-
+- **Version Control** : `GitHub`
+- **Front-end** : `HTML`,`CSS`,`JavaScript`,`JQuery`,`Bootstrap`
 
 ## :mag_right: 사용 기술
 
