@@ -1,6 +1,7 @@
 ## :computer: 프로젝트 소개
 <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/0f8393f6-d79f-41e7-bdfe-81016cac3d2f">
 </br>
+
 `Spring Boot`와 `JPA`를 사용하여 이미지 기반 소셜 미디어 인스타그램 서비스를 구현한 프로젝트입니다.
 
 ## :pencil2: NOTION
