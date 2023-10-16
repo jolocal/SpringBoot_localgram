@@ -22,7 +22,7 @@
 - **Front-end** : `HTML`,`CSS`,`JavaScript`,`JQuery`,`Bootstrap`
 
 ## :pushpin: DB 설계
-<p align="center">
+<p align="left">
   <img src="https://github.com/jolocal/SpringBoot_localgram/assets/129312146/336ce1cd-607c-422b-b11c-73c3f7802205">
 </p>
 
